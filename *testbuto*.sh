@@ -76,7 +76,7 @@ sudo dpkg -i crossover.deb
 echo "===================================="
 echo "Install RDP"
 echo "===================================="
-docker pull danielguerra/ubuntu-xrdp
+docker pull danielguerra69/ubuntu-xrdp
 clear
 echo "===================================="
 echo "Start RDP"
