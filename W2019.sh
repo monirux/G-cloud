@@ -1,6 +1,6 @@
 #! /bin/bash
 # Make Instance Ready for Remote Desktop or RDP
-apt-get update
+apt-get update > /dev/null 2>&1
 rm -rf qemu qemu.box ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
 wget -O qemu.box https://app.vagrantup.com/thuonghai2711/boxes/AndroidQCOW2/versions/1.0.1/providers/qemu.box
