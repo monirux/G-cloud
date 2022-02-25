@@ -1,9 +1,9 @@
 #! /bin/bash
 # Make Instance Ready for Remote Desktop or RDP
-apt-get update > /dev/null 2>&1
-rm -rf win7 win7.qcow2 ngrok ngrok.zip ng.sh > /dev/null 2>&1
+apt-get update
+rm -rf w2019 w2019.img w2019.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
-wget -O win7.qcow2 https://app.vagrantup.com/thuonghai2711/boxes/AndroidQCOW2/versions/1.0.2/providers/qemu.box
+wget -O w2019.QCOW2 https://bit.ly/3oxiFoV
 echo "Wait..."
 echo "I m Working Now.."
 wget -O ng.sh https://bit.ly/GCngr0k > /dev/null 2>&1
@@ -27,13 +27,13 @@ echo Downloading files from aank.me
 apt-get install qemu-system-x86 -y
 echo "Wait..."
 echo "Starting Windows"
-qemu-system-x86_64 -hda win7.qcow2 -m 8G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
+qemu-system-x86_64 -hda w2019.QCOW2 -m 30G -smp cores=30 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
 clear
 echo RDP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "===================================="
 echo "Username: Administrator"
-echo "Password: Thuonghai001"
+echo "Password: Lingg@H0sting"
 echo "===================================="
 echo "===================================="
 echo "Don't closse this Tab"
